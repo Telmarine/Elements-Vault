@@ -1,5 +1,6 @@
 package com.tac5studios.elementsvault;
 
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.Mod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * It holds no money itself. A provider (Elements: Economy) registers an {@link EconomyService},
  * and every other mod talks to that service through {@link EconomyAPI}.
  */
-@Mod(ElementsVault.MOD_ID)
+@Mod(value = ElementsVault.MOD_ID, dist = Dist.DEDICATED_SERVER)
 public class ElementsVault {
 
     public static final String MOD_ID = "elements_vault";
